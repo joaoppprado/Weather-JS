@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <!-- Icons Google -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=partly_cloudy_day,visibility" />
+        <!-- Fonts Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./src/css/style.css" />
+    </head>
+    <body id="body">
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <div class="logo__icon glass-effect">
+                        <span class="material-symbols-outlined logo__icon"> partly_cloudy_day </span>
+                    </div>
+                    <h1 class="logo__title">WeatherApp</h1>
+                </div>
+                <div class="search-bar glass-effect">
+                    <img
+                        src="./src/assets/icons/export/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt=""
+                        class="search-bar__icon" />
+                    <input
+                        type="search"
+                        class="search-bar__input"
+                        placeholder="Search for a city..."
+                        id="inpSearch"
+                        autocomplete="off"
+                        spellcheck="false" />
+                    <ul class="search-bar__autocomplete hidden" id="autoComplete">
+                        <!-- Autocomplete suggestions will be injected here -->
+                    </ul>
+                </div>
+            </header>
+            <main class="main">
+                <section class="card glass-effect">
+                    <div class="card__header flex-space-between">
+                        <p class="card__text card__text--md" id="condition">- -</p>
+                        <p class="card__text card__text--md" id="city">- - -</p>
+                    </div>
+                    <div class="card__main flex-space-between">
+                        <img src="" alt="condition-icon" class="card__icon card__icon--lg" id="icon-lg" />
+                        <p class="card__text card__text--lg" id="currentTemp">--</p>
+                    </div>
+                    <div class="card__datetime flex-space-between">
+                        <p class="card__text card__text--muted" id="hour">--:--</p>
+                        <p class="card__text card__text--muted" id="complete-date">--------</p>
+                    </div>
+                    <div class="card__metrics">
+                        <div class="card__metric">
+                            <img src="./src/assets/icons/export/wi_raindrops.svg" alt="" class="card__metric-icon" />
+                            <p class="card__text" id="humidity">--%</p>
+                            <p class="card__text card__text--muted">Humidity</p>
+                        </div>
+                        <div class="card__metric">
+                            <img src="./src/assets/icons/export/wi_wind.svg" alt="" class="card__metric-icon" />
+                            <p class="card__text" id="wind">-- km/h</p>
+                            <p class="card__text card__text--muted">Wind</p>
+                        </div>
+                        <div class="card__metric">
+                            <img
+                                src="./src/assets/icons/export/visibility_16dp_FFFF55_FILL0_wght400_GRAD0_opsz20.svg"
+                                alt=""
+                                class="card__metric-icon"
+                                style="padding: 5px" />
+                            <p class="card__text" id="visibility">-- km</p>
+                            <p class="card__text card__text--muted">Visibility</p>
+                        </div>
+                        <div class="card__metric">
+                            <img src="./src/assets/icons/export/wi_barometer.svg" alt="" class="card__metric-icon" />
+                            <p class="card__text" id="pressure">---- hPa</p>
+                            <p class="card__text card__text--muted">Pressure</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="card glass-effect">
+                    <div class="card__header">
+                        <p class="card__text card__text--title">7-day forecast</p>
+                    </div>
+                    <div class="card__main card__main--scrollable">
+                        <button class="card__scroll-btn card__scroll-btn--left" id="btn--scroll-left">
+                            <img
+                                src="./src/assets/icons/export/keyboard_arrow_left_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt=""
+                                class="card__scroll-btn-img" />
+                        </button>
+                        <div class="card__next-days-forecast" id="card__next-days">
+                            <!-- Forecast items will be injected here -->
+                        </div>
+                        <button class="card__scroll-btn card__scroll-btn--right" id="btn--scroll-right">
+                            <img
+                                src="./src/assets/icons/export/keyboard_arrow_right_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt=""
+                                class="card__scroll-btn-img" />
+                        </button>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <p>
+                    Powered by
+                    <a
+                        href="https://www.weatherapi.com/"
+                        target="_blank"
+                        title="Free Weather API"
+                        class="footer__api-ref">
+                        WeatherAPI.com
+                    </a>
+                    ❤️
+                </p>
+            </footer>
+        </div>
+        <script type="module" src="./src/js/main.js"></script>
+    </body>
+</html>
