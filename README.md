@@ -22,7 +22,7 @@ Night time UI variant
 ## 🛠️ Technologies Used
 
 * HTML5
-* CSS3 (Custom Properties, Flexbox, Glassmorphism design)
+* CSS3
 * Vanilla JavaScript (ES6 Modules, Promises, Async/Await)
 * [WeatherAPI.com](https://www.weatherapi.com/) (Data provider)
 
